@@ -1,12 +1,23 @@
 # proxy-outcome
 
+> Evidence-first classification for proxy and web-retrieval outcomes.
+
 **403 ≠ bad proxy. 429 ≠ bad proxy. 451 ≠ bad proxy.**
 
-`proxy-outcome` is a small, deterministic classification library for HTTP and proxy-path observations in scraping and web-retrieval systems.
+`proxy-outcome` is a small, deterministic Python library that classifies HTTP and proxy-path observations without inventing root cause. It is designed for scraper, crawler, browser-automation, and web-retrieval systems where a failed request should not automatically poison a proxy pool.
 
-Its job is deliberately narrow: preserve evidence without inventing a root cause.
+**Status:** alpha · Python 3.10+ · zero runtime dependencies · local-only · no telemetry
 
 Built by **PN Labs**.
+
+## PN Labs reliability toolkit
+
+| Project | Purpose |
+| --- | --- |
+| **proxy-outcome** | Classify what happened without over-attributing the cause |
+| [**proxybench**](https://github.com/pnlabs-dev/proxybench) | Compare usable-result efficiency between retrieval policies |
+
+The tools are intentionally separate: classify evidence first, then benchmark whether a policy actually improves outcomes.
 
 ## Why this exists
 
@@ -157,6 +168,10 @@ CI installs the package before testing, runs CLI smoke tests, and executes a non
 ## Architecture
 
 See [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md).
+
+## Contributing
+
+Small, evidence-preserving improvements are welcome. See [`CONTRIBUTING.md`](CONTRIBUTING.md) before opening a pull request.
 
 ## Design partners
 
